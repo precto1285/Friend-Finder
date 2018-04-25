@@ -10,3 +10,17 @@ var port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname, "app/home.html"));
+});
+
+app.get("app/survey", function(req, res){
+    res.sendFile(path.join(__dirname, "app/survey.html"));
+});
+
+
+
+app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
