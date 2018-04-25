@@ -5,3 +5,8 @@ const express = require('express');
 const bodyParder = require('body-parser');
 const path = require('path');
 
+var app = express();
+var port = 3000;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
