@@ -2,21 +2,21 @@
 // npm packages we've used in class: `express`, `body-parser` and `path`.
 
 const express = require('express');
-const bodyParder = require('body-parser');
+const bodyParser = require('body-parser');
 const path = require('path');
 
 var app = express();
-var port = process.env.PORT || 3000;
+var PORT = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "app/home.html"));
+    res.sendFile(path.join(__dirname, "../public/home.html"));
 });
 
 app.get("app/survey", function(req, res){
-    res.sendFile(path.join(__dirname, "app/survey.html"));
+    res.sendFile(path.join(__dirname, "../public/survey.html"));
 });
 
 
