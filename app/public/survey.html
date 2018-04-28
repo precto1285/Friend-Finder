@@ -42,6 +42,8 @@
   <ol id="ffSrv">
     <li>
       <form>
+        <input id='name'>
+
         <p>I love going out every weekend!</p>
         <input id='r1.1' type='checkbox' name='1NoWay!' value=1>
         <label for='r1.1'>1-No Way!</label>
@@ -229,13 +231,29 @@
     </li>
     <br>
     <br>
-    <input type='submit' value='Submit'>
+    <input id=submit type='submit' value='Submit'>
   </ol>
 
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="../routing/htmlRoutes.js"></script>
+  <script type="text/javascript">
+    $('#submit').on('click', function(event){
+      event.preventDefault();
+
+      var newFriend = {
+        name:'',
+        image:'',
+        scores:''
+      };
+    $.post("/", newFriend)
+    .then(function(data){
+      console.log(friend);
+    })
+
+    });
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>

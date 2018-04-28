@@ -88,7 +88,5 @@ var friendsArray = [
     scores:[1,5,4,3,2,1,5,4,3,2]
 }];
 
-for(var i = 0; i < friendsArray.length; i++){
-    var friendList = friendsArray[i];
-    console.log(friendList);
-};
+
+module.exports = friendsArray;

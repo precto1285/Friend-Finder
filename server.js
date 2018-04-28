@@ -3,7 +3,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path');
+
 
 var app = express();
 var PORT = 3000;
@@ -11,15 +11,8 @@ var PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/home.html"));
-});
-
-app.get("app/survey", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/survey.html"));
-});
-
-
+var htmlRoutes = require("./app/routing/htmlRoutes.js");
+var apiRoutes = require("./app/routing/apiRoutes.js");
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
