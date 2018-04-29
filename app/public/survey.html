@@ -1,266 +1,207 @@
-<!-- Your survey should have 10 questions of your choosing. Each answer should be on a 
-    scale of 1 to 5 based on how much the user agrees or disagrees with a question. -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-  <title>FRIENDFINDER Survey</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <style>
-    #ffSrv {
-      margin-left: 350px;
-      font-size: 12px;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      background-color: aliceblue;
-    }
-
-    header {
-      background-color: navy;
-      color: white;
-      font-style: inherit;
-      border: solid;
-      border-color: brown;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>FriendFinder SUrvey</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
+
   <header>
-    <center>
-      <h1>FriendFinder Survey:</h1>
-      <p>Pick one answer from each of the following statements below which is closest to your agreement.
-        <br>After all answers are submitted, a matching friend will be listed for you.</p>
-    </center>
+    <h1>FriendFinder Survey</h1>
   </header>
-  <br>
-  <ol id="ffSrv">
-    <li>
-      <form>
-        <input id='name'>
 
-        <p>I love going out every weekend!</p>
-        <input id='r1.1' type='checkbox' name='1NoWay!' value=1>
-        <label for='r1.1'>1-No Way!</label>
-        <input id='r1.2' type='checkbox' name='1Mm,Nah!' value=2>
-        <label for='r1.2'>2-Mm, Nah!</label>
-        <input id='r1.3' type='checkbox' name='1Hmmm...' value=3>
-        <label for='r1.3'>3-Hmmm...</label>
-        <input id='r1.4' type='checkbox' name='1Sure..' value=4>
-        <label for='r1.4'>4-Sure..</label>
-        <input id='r1.5' type='checkbox' name='1HellYeah!' value=5>
-        <label for='r1.5'>5-Hell Yeah!</label>
-        <br>
+  <main>
+    <form>
+      <h2>Tell Us About Yourself:</h2>
+      <label for="name">NAME (required)</label>
+      <input id="name" placeholder="Add your name here">
+      <br>
+      <label for="photo">PHOTO:</label>
+      <input id="photo" placeholder="Add photo here">
+      <br>
+      <br>
 
-      </form>
-    </li>
-    <br>
-    <br>
-    <li>
-      <form>
-        <p>I prefer living in Suburbia.</p>
-        <input id='r2.1' type='checkbox' name='2NoWay!' value=1>
-        <label for='r2.1'>1-No Way!</label>
-        <input id='r2.2' type='checkbox' name='2Mm,Nah!' value=2>
-        <label for='r2.2'>2-Mm, Nah!</label>
-        <input id='r2.3' type='checkbox' name='2Hmmm...' value=3>
-        <label for='r2.3'>3-Hmmm...</label>
-        <input id='r2.4' type='checkbox' name='2Sure..' value=4>
-        <label for='r2.4'>4-Sure..</label>
-        <input id='r2.5' type='checkbox' name='2HellYeah!' value=5>
-        <label for='r2.5'>5-Hell Yeah!</label>
-        <br>
+      <h3>Q.1</h3>
+      <label for="q1">I love going out every weekend!</label>
+      <select class="form-control" id="q1">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
-      </form>
-    </li>
-    <br>
-    <br>
-    <li>
-      <form>
-        <p>I enjoy a wide variety of cuisines!</p>
-        <input id='r3.1' type='checkbox' name='3NoWay!' value=1>
-        <label for='r3.1'>1-No Way!</label>
-        <input id='r3.2' type='checkbox' name='3Mm,Nah!' value=2>
-        <label for='r3.2'>2-Mm, Nah!</label>
-        <input id='r3.3' type='checkbox' name='3Hmmm...' value=3>
-        <label for='r3.3'>3-Hmmm...</label>
-        <input id='r3.4' type='checkbox' name='3Sure..' value=4>
-        <label for='r3.4'>4-Sure..</label>
-        <input id='r3.5' type='checkbox' name='3HellYeah!' value=5>
-        <label for='r3.5'>5-Hell Yeah!</label>
-        <br>
+      <h3>Q.2</h3>
+      <label for="q2">I love going out every weekend!</label>
+      <select class="form-control" id="q2">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
-      </form>
-    </li>
-    <br>
-    <br>
-    <li>
-      <form>
-        <p>I love to travel to everywhere possible!</p>
-        <input id='r4.1' type='checkbox' name='4NoWay!' value=1>
-        <label for='r4.1'>1-No Way!</label>
-        <input id='r4.2' type='checkbox' name='4Mm,Nah!' value=2>
-        <label for='r4.2'>2-Mm, Nah!</label>
-        <input id='r4.3' type='checkbox' name='4Hmmm...' value=3>
-        <label for='r4.3'>3-Hmmm...</label>
-        <input id='r4.4' type='checkbox' name='4Sure..' value=4>
-        <label for='r4.4'>4-Sure..</label>
-        <input id='r4.5' type='checkbox' name='4HellYeah!' value=5>
-        <label for='r4.5'>5-Hell Yeah!</label>
-        <br>
+      <h3>Q.3</h3>
+      <label for="q3">I love going out every weekend!</label>
+      <select class="form-control" id="q3">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
-      </form>
-    </li>
-    <br>
-    <br>
-    <li>
-      <form>
-        <p>I am active on social media.</p>
-        <input id='r5.1' type='checkbox' name='5NoWay!' value=1>
-        <label for='r5.1'>1-No Way!</label>
-        <input id='r5.2' type='checkbox' name='5Mm,Nah!' value=2>
-        <label for='r5.2'>2-Mm, Nah!</label>
-        <input id='r5.3' type='checkbox' name='5Hmmm...' value=3>
-        <label for='r5.3'>3-Hmmm...</label>
-        <input id='r5.4' type='checkbox' name='5Sure..' value=4>
-        <label for='r5.4'>4-Sure..</label>
-        <input id='r5.5' type='checkbox' name='5HellYeah!' value=5>
-        <label for='r5.5'>5-Hell Yeah!</label>
-        <br>
+      <h3>Q.4</h3>
+      <label for="q4">I love going out every weekend!</label>
+      <select class="form-control" id="q4">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
-      </form>
-    </li>
-    <br>
-    <br>
-    <li>
-      <form>
-        <p>I am a daytime person.</p>
-        <input id='r6.1' type='checkbox' name='6NoWay!' value=1>
-        <label for='r6.1'>1-No Way!</label>
-        <input id='r6.2' type='checkbox' name='6Mm,Nah!' value=2>
-        <label for='r6.2'>2-Mm, Nah!</label>
-        <input id='r6.3' type='checkbox' name='6Hmmm...' value=3>
-        <label for='r6.3'>3-Hmmm...</label>
-        <input id='r6.4' type='checkbox' name='6Sure..' value=4>
-        <label for='r6.4'>4-Sure..</label>
-        <input id='r6.5' type='checkbox' name='6HellYeah!' value=5>
-        <label for='r6.5'>5-Hell Yeah!</label>
-        <br>
+      <h3>Q.5</h3>
+      <label for="q5">I love going out every weekend!</label>
+      <select class="form-control" id="q5">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
-      </form>
-    </li>
-    <br>
-    <br>
-    <li>
-      <form>
-        <p>I enjoy being around children.</p>
-        <input id='r7.1' type='checkbox' name='7NoWay!' value=1>
-        <label for='r7.1'>1-No Way!</label>
-        <input id='r7.2' type='checkbox' name='7Mm,Nah!' value=2>
-        <label for='r7.2'>2-Mm, Nah!</label>
-        <input id='r7.3' type='checkbox' name='7Hmmm...' value=3>
-        <label for='r7.3'>3-Hmmm...</label>
-        <input id='r7.4' type='checkbox' name='7Sure..' value=4>
-        <label for='r7.4'>4-Sure..</label>
-        <input id='r7.5' type='checkbox' name='7HellYeah!' value=5>
-        <label for='r7.5'>5-Hell Yeah!</label>
-        <br>
+      <h3>Q.6</h3>
+      <label for="q6">I love going out every weekend!</label>
+      <select class="form-control" id="q6">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
-      </form>
-    </li>
-    <br>
-    <br>
-    <li>
-      <form>
-        <p>I enjoy sci-fi, comic-films, and pop-culture fantasy.</p>
-        <input id='r8.1' type='checkbox' name='8NoWay!' value=1>
-        <label for='r8.1'>1-No Way!</label>
-        <input id='r8.2' type='checkbox' name='8Mm,Nah!' value=2>
-        <label for='r8.2'>2-Mm, Nah!</label>
-        <input id='r8.3' type='checkbox' name='8Hmmm...' value=3>
-        <label for='r8.3'>3-Hmmm...</label>
-        <input id='r8.4' type='checkbox' name='8Sure..' value=4>
-        <label for='r8.4'>4-Sure..</label>
-        <input id='r8.5' type='checkbox' name='8HellYeah!' value=5>
-        <label for='r8.5'>5-Hell Yeah!</label>
-        <br>
+      <h3>Q.7</h3>
+      <label for="q7">I love going out every weekend!</label>
+      <select class="form-control" id="q7">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
-      </form>
-    </li>
-    <br>
-    <br>
-    <li>
-      <form>
-        <p>I enjoy debating with people who do not share my same perspective.</p>
-        <input id='r9.1' type='checkbox' name='9NoWay!' value=1>
-        <label for='r9.1'>1-No Way!</label>
-        <input id='r9.2' type='checkbox' name='9Mm,Nah!' value=2>
-        <label for='r9.2'>2-Mm, Nah!</label>
-        <input id='r9.3' type='checkbox' name='9Hmmm...' value=3>
-        <label for='r9.3'>3-Hmmm...</label>
-        <input id='r9.4' type='checkbox' name='9Sure..' value=4>
-        <label for='r9.4'>4-Sure..</label>
-        <input id='r9.5' type='checkbox' name='9HellYeah!' value=5>
-        <label for='r9.5'>5-Hell Yeah!</label>
-        <br>
+      <h3>Q.81</h3>
+      <label for="q8">I love going out every weekend!</label>
+      <select class="form-control" id="q8">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
-      </form>
-    </li>
-    <br>
-    <br>
-    <li>
-      <form>
-        <p>I think tropical is overrated.</p>
-        <input id='r10.1' type='checkbox' name='10NoWay!' value=1>
-        <label for='r10.1'>1-No Way!</label>
-        <input id='r10.2' type='checkbox' name='10Mm,Nah!' value=2>
-        <label for='r10.2'>2-Mm, Nah!</label>
-        <input id='r10.3' type='checkbox' name='10Hmmm...' value=3>
-        <label for='r10.3'>3-Hmmm...</label>
-        <input id='r10.4' type='checkbox' name='10Sure..' value=4>
-        <label for='r10.4'>4-Sure..</label>
-        <input id='r10.5' type='checkbox' name='10HellYeah!' value=5>
-        <label for='r10.5'>5-Hell Yeah!</label>
-        <br>
-      </form>
-    </li>
-    <br>
-    <br>
-    <input id=submit type='submit' value='Submit'>
-  </ol>
+      <h3>Q.9</h3>
+      <label for="q9">I love going out every weekend!</label>
+      <select class="form-control" id="q9">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
+      <h3>Q.10</h3>
+      <label for="q10">I love going out every weekend!</label>
+      <select class="form-control" id="q10">
+        <option value="" selected>--Select Value--</option>
+        <option value="1">1 - Hell Yeah!</option>
+        <option value="2">2 - Sure Thing.</option>
+        <option value="3">3 - Sigh, Okay.</option>
+        <option value="4">4 - Hmmm, I'm Kinda Leaning "no"...</option>
+        <option value="5">5 - No Way Jose!</option>
+      </select>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="../routing/htmlRoutes.js"></script>
-  <script type="text/javascript">
-    $('#submit').on('click', function(event){
-      event.preventDefault();
+      <button id="submit" type="submit">Submit</button>
 
-      var newFriend = {
-        name:'',
-        image:'',
-        scores:''
-      };
-    $.post("/", newFriend)
-    .then(function(data){
-      console.log(friend);
-    })
+    </form>
 
-    });
+  </main>
+
+  <script src="../data/friends.js"></script>
+  <script type='text/javascript'>
+
+    $("#submitButton").on("click", function(event) {
+        event.preventDefault();
+              // Form validation
+        function validateForm() {
+          var isValid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+        // If all required fields are filled
+        if (validateForm()) {
+          var scoresArray = [];
+          var q1Score = $("#q1").val();
+          var q2Score = $("#q2").val();
+          var q3Score = $("#q3").val();
+          var q4Score = $("#q4").val();
+          var q5Score = $("#q5").val();
+          var q6Score = $("#q6").val();
+          var q7Score = $("#q7").val();
+          var q8Score = $("#q8").val();
+          var q9Score = $("#q9").val();
+          var q10Score = $("#q10").val();
+          scoresArray = [q1Score, q2Score, q3Score, q4Score, q5Score, q6Score, q7Score, q8Score, q9Score, q10Score]
+          var newCharacter = {
+            name: $("#name").val().trim(),
+            photo: ($("#photo").val().trim()),
+            scores: scoresArray
+          };
+          var currentURL = window.location.origin;
+          $.post(currentURL + "/api/friends", newCharacter, function(data) {
+            // Use jQuery to 
+            $("#matchName").text(data.name);
+            $("#matchPhoto").attr("src", data.photo);
+          });
+          $(".modal").modal();
+          
+          $("#name").val("");
+          $("#photo").val("");
+          $("#q1").val("");
+          $("#q2").val("");
+          $("#q3").val("");
+          $("#q4").val("");
+          $("#q5").val("");
+          $("#q6").val("");
+          $("#q7").val("");
+          $("#q8").val("");
+          $("#q9").val("");
+          $("#q10").val("");
+        }
+        else {
+          alert("Please fill out all fields before submitting!");
+        }
+    
+      
+      });
   </script>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>
