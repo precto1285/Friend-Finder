@@ -32,10 +32,8 @@
 // // The closest match will be the user with the least amount of difference.
 
 
-var user1='';
-var user2='';
 
-
+//data to for app. 
 var friendsArray = [
 {
     name : "Booger",
